@@ -1,0 +1,41 @@
+body {
+    font-family: $font-prim;
+    color: clr(text);
+}
+
+h1 {
+    @include font-size(57px);
+    color: clr(white);
+    font-weight: 300;
+}
+
+h2 {
+    @include font-size(42px);
+    color: clr(brand-blue);
+    font-weight: 500;
+}
+
+h3 {
+    @include font-size(36px);
+    color: clr(text-alt);
+    font-weight: 300;
+}
+
+h4 {
+    @include font-size(26px);
+    color: clr(brand-blue);
+    font-weight: 500;
+}
+
+h5 {
+    @include font-size(21px);
+    color: clr(brand-blue);
+    font-weight: 500;
+}
+
+h6 {
+    @include font-size(15px);
+    text-transform: uppercase;
+    color: clr(text-alt);
+    font-weight: 700;
+}

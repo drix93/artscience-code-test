@@ -1,0 +1,46 @@
+#wrapper-navbar {
+    transition: $trans-base-slow transform, $trans-base-slow box-shadow;
+    
+    #main-nav {
+        transition: $trans-base-slow padding;
+    }
+
+    .custom-logo-link {
+        transition: $trans-base-slow transform;
+    }
+
+    .scrolling & {
+        box-shadow: 0 3px 6px rgba(clr(black), .3);
+    }
+
+    .scrollingDownward & {
+        transform: translateY(calc(-100% - 9px));
+    }
+
+    .scrollingUp & {
+        transform: translateY(0);
+    }
+
+    @include media-breakpoint-up(md) {
+
+        .scrollingDownward & {
+            transform: translateY(0);
+
+            #main-nav {
+                padding: .5rem 1rem;
+            }
+
+            .custom-logo-link {
+                transform: translateY(0);
+            }
+        }
+
+        .scrollingUp.scrollPoint & {
+            transform: translateY(0);
+        }
+
+        .scrollPoint & {
+            transform: translateY(-30px);
+        }
+    }
+}

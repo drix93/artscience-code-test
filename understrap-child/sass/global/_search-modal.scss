@@ -1,0 +1,43 @@
+#searchModal {
+    .modal {
+        &-content {
+            border: none;
+            background-color: transparent;
+
+            input {
+                border-radius: 0;
+            }
+
+            #searchsubmit {
+                @include font-size(16px);
+                padding: 4.5px 10px;
+            }
+        }
+
+        &-header {
+            border: none;
+
+            .close {
+                background-color: white;
+                transition: background-color $trans-base;
+                opacity: 1 !important;
+                border-radius: 0;
+                padding: 4px 8px;
+
+                &:hover {
+                    background-color: clr(brand-blue);
+
+                    span {
+                        color: clr(white);
+                    }
+                }
+
+                span {
+                    transition: background-color $trans-base;
+                    text-shadow: none;
+                    color: clr(brand-blue);
+                }
+            }
+        }
+    }
+}

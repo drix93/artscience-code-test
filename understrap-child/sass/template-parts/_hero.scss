@@ -1,0 +1,64 @@
+.hero-section {
+    background-size: cover;
+    background-position: center;
+
+    .sub-links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+
+        .link-item {
+            position: relative;
+            margin-bottom: 10px;
+
+            a {
+                @extend h3;
+                font-weight: 400;
+                color: clr(white);
+                text-decoration: none;
+                border-bottom: 2px solid transparent;
+                transition: border-bottom-color $trans-base;
+
+                &:hover {
+                    border-bottom-color: clr(brand-yellow);
+                }
+            }
+
+            &:not(:first-child) {
+
+                @include media-breakpoint-up(md) {
+                    margin-left: 30px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 3px;
+                        height: 28px;
+                        background-color: clr(brand-yellow);
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -15px;
+                    }
+                }
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: 63px;
+
+                    &::after {
+                        left: -31.5px;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            flex-flow: row nowrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height: 760px;
+    }
+}

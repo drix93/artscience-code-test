@@ -1,0 +1,4 @@
+@function clr($choice) {
+    $color: map-get($colors, $choice);
+    @return $color;
+}

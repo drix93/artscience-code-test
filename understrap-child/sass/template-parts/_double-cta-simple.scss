@@ -1,0 +1,40 @@
+.double-cta-simple-section {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 66px 0;
+
+    .col-12 {
+        &:last-child {
+            @extend .mb-0;
+        }
+
+        .cta-item {
+            background-color: rgba(clr(white), .85);
+            padding: 41px 39px 28px;
+
+            .body {
+                @extend h4;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 130px;
+                    height: 4px;
+                    background-color: clr(brand-yellow);
+                    top: -15px;
+                    left: -45px;
+
+                    @include media-breakpoint-up(md) {
+                        left: -60px;
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-left: 50px;
+        }
+    }
+}

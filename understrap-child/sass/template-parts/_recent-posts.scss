@@ -1,0 +1,40 @@
+.recent-posts-section {
+
+    .news-item {
+        a {
+            text-decoration: none;
+            transition: box-shadow $trans-base;
+
+            .image {}
+
+            .content {
+                .cat {
+                    @extend h6;
+                    letter-spacing: 1px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 4px;
+                        height: 61px;
+                        background-color: clr(brand-yellow);
+                        left: -15px;
+                        bottom: -2px;
+                    }
+                }
+
+                .title {}
+
+                .excerpt {
+                    color: clr(text);
+                }
+            }
+
+            &:hover,
+            &:focus {
+                box-shadow: 0 3px 6px clr(brand-yellow);
+            }
+        }
+    }
+}
